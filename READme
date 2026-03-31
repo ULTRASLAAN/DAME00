@@ -1,0 +1,39 @@
+Compare rapidement Swing, JavaFX, Compose for Desktop.
+Rédige un court paragraphe justifiant le choix de Swing (à mettre dans le README.md).
+
+Explications : intergraphique
+
+JFrame est la fenêtre principale de ton application.
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) : ferme le programme quand on ferme la fenêtre.
+setSize(600, 600) : taille de la fenêtre (modifiable plus tard).
+setLocationRelativeTo(null) : centre la fenêtre à l’écran.
+setVisible(true) : rend la fenêtre visible.
+
+Voici les explications du code ajouté dans PlateauGraphique.java : platgraph
+
+La classe hérite de JPanel, ce qui permet de la dessiner dans une fenêtre Swing.
+La constante TAILLE = 8 indique qu’on veut un damier 8x8.
+La méthode paintComponent(Graphics g) est appelée automatiquement par Swing pour dessiner le panneau.
+On calcule la taille d’une case en divisant la largeur du panneau par 8.
+Deux boucles for parcourent chaque ligne (i) et chaque colonne (j) du damier.
+On alterne les couleurs avec (i + j) % 2 : si la somme est paire, la case est blanche, sinon elle est foncée.
+g.fillRect(...) dessine chaque case à la bonne position.
+Ce code permet d’afficher un damier 8x8, prêt à recevoir les pions plus tard.
+
+Pion
+Après avoir dessiné chaque case, le code vérifie si la case est foncée ((i + j) % 2 != 0).
+Si la case est foncée et se trouve dans les 3 premières lignes (i < 3), il dessine un pion noir (en haut du damier).
+Si la case est foncée et se trouve dans les 3 dernières lignes (i > 4), il dessine un pion rouge (en bas du damier).
+Les pions sont dessinés avec fillOval, avec une petite marge pour qu’ils ne touchent pas les bords de la case.
+Résultat : tu as maintenant un damier avec les pions placés comme dans une vraie partie de dames.
+
+Un MouseListener est ajouté dans le constructeur : il détecte les clics de souris sur le damier.
+Quand tu cliques, il calcule la colonne et la ligne de la case cliquée à partir des coordonnées du clic.
+Il affiche dans la console la case sélectionnée (ex : "Case cliquée : ligne 2, colonne 5").
+Explications :
+
+mouse 
+getWidth() / TAILLE donne la taille d’une case.
+e.getX() / tailleCase donne la colonne, e.getY() / tailleCase donne la ligne.
+Tu pourras utiliser ces informations pour sélectionner un pion, puis gérer les déplacements.
+Teste en cliquant sur le damier : tu dois voir les coordonnées des cases dans la console.
