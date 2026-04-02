@@ -35,7 +35,7 @@ Swing a été choisi pour l'interface graphique car :
 - `Joueur.java`, `Jeu.java` : gestion des joueurs et du déroulement
 
 ## Auteurs
-- [À compléter avec les noms/prénoms du groupe]
+-Mustafa 
 
 ## Licence
 Projet pédagogique, usage libre dans le cadre du cours.
