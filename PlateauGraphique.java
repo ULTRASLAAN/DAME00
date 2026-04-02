@@ -58,11 +58,18 @@ public class PlateauGraphique extends JPanel {
         });
     }
 
+    public void recommencerPartie() {
+        plateau = new Plateau();
+        caseSelectionneeX = -1;
+        caseSelectionneeY = -1;
+        historique.clear();
+        repaint();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         int largeur = getWidth();
-        int hauteur = getHeight();
         int tailleCase = largeur * 2 / 3 / Plateau.TAILLE;
         // Damier sur 2/3 de la largeur
         for (int i = 0; i < Plateau.TAILLE; i++) {
@@ -84,16 +91,14 @@ public class PlateauGraphique extends JPanel {
                 }
 
                 // Affiche les pions selon l'état du plateau
-                if (plateau.getCase(i, j) == Plateau.NOIR) {
-                    int marge = tailleCase / 8;
-                    int diametre = tailleCase - 2 * marge;
-                    g.setColor(Color.BLACK);
-                    g.fillOval(x + marge, y + marge, diametre, diametre);
-                } else if (plateau.getCase(i, j) == Plateau.ROUGE) {
-                    int marge = tailleCase / 8;
-                    int diametre = tailleCase - 2 * marge;
-                    g.setColor(Color.RED);
-                    g.fillOval(x + marge, y + marge, diametre, diametre);
+                int piece = plateau.getCase(i, j);
+                switch (piece) {
+                    case Plateau.NOIR -> dessinerPion(g, x, y, tailleCase, Color.BLACK, false);
+                    case Plateau.DAME_NOIR -> dessinerPion(g, x, y, tailleCase, Color.BLACK, true);
+                    case Plateau.ROUGE -> dessinerPion(g, x, y, tailleCase, Color.RED, false);
+                    case Plateau.DAME_ROUGE -> dessinerPion(g, x, y, tailleCase, Color.RED, true);
+                    default -> {
+                    }
                 }
             }
         }
@@ -104,6 +109,24 @@ public class PlateauGraphique extends JPanel {
         for (int i = Math.max(0, historique.size() - 20); i < historique.size(); i++) {
             g.drawString(historique.get(i), largeur * 2 / 3 + 10, yText);
             yText += 18;
+        }
+    }
+
+    private void dessinerPion(Graphics g, int x, int y, int tailleCase, Color couleur, boolean dame) {
+        int marge = tailleCase / 8;
+        int diametre = tailleCase - 2 * marge;
+        g.setColor(couleur);
+        g.fillOval(x + marge, y + marge, diametre, diametre);
+
+        if (dame) {
+            g.setColor(Color.WHITE);
+            g.drawOval(x + marge + 3, y + marge + 3, diametre - 6, diametre - 6);
+            g.setFont(new Font("SansSerif", Font.BOLD, Math.max(12, tailleCase / 3)));
+            FontMetrics fm = g.getFontMetrics();
+            String marque = "D";
+            int tx = x + (tailleCase - fm.stringWidth(marque)) / 2;
+            int ty = y + (tailleCase + fm.getAscent()) / 2 - 2;
+            g.drawString(marque, tx, ty);
         }
     }
 }

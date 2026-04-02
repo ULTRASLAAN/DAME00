@@ -1,7 +1,7 @@
 # Jeu de Dames en Java
 
 ## Présentation
-Ce projet est un jeu de dames classique, développé en Java avec une interface graphique Swing. Il permet à deux joueurs de s'affronter sur le même ordinateur, en respectant les règles traditionnelles du jeu de dames (déplacement diagonal, captures, alternance des joueurs, historique des coups).
+Ce projet est un jeu de dames classique, développé en Java avec une interface graphique Swing. Il permet à deux joueurs de s'affronter sur le même ordinateur, avec les déplacements diagonaux, les captures, la promotion en dame, l'alternance des joueurs et l'historique des coups.
 
 ## Installation et Lancement
 1. **Prérequis** : Java JDK 8 ou supérieur installé.
@@ -25,7 +25,7 @@ Swing a été choisi pour l'interface graphique car :
 - La majorité des ressources pédagogiques pour débuter en Java utilisent Swing.
 
 ## Aperçu
-![Aperçu du jeu de dames](screenshot.png)
+![Aperçu du jeu de dames](image.png)
 
 ## Structure du projet
 - `Main.java` : point d'entrée du programme
@@ -35,7 +35,5 @@ Swing a été choisi pour l'interface graphique car :
 - `Joueur.java`, `Jeu.java` : gestion des joueurs et du déroulement
 
 ## Auteurs
--Mustafa 
-
-## Licence
-Projet pédagogique, usage libre dans le cadre du cours.
+- Mustafa
+- Rayann
