@@ -1,8 +1,12 @@
 import javax.swing.*;
 
 public class Interfacegraphique {
-    public Interfacegraphique() {
-        JFrame frame = new JFrame("Jeu de Dames");
+    private Interfacegraphique() {
+    }
+
+    public static void ouvrir(String nomNoir, String nomRouge) {
+        String titre = "Jeu de Dames - " + nomNoir + " vs " + nomRouge;
+        JFrame frame = new JFrame(titre);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 600); // Taille de la fenêtre
         frame.setLocationRelativeTo(null); // Centre la fenêtre
