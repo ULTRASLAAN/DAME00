@@ -1,3 +1,5 @@
+package modele;
+
 public class Plateau {
     public static final int TAILLE = 8;
     public static final int VIDE = 0;

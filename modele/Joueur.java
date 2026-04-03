@@ -1,3 +1,5 @@
+package modele;
+
 public class Joueur {
     private int couleur; // 1 = noir, 2 = rouge
     private String nom;

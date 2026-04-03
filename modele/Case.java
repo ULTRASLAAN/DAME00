@@ -1,3 +1,5 @@
+package modele;
+
 public class Case {
     private Piece piece;
 

@@ -1,3 +1,5 @@
+package modele;
+
 public class Dame extends Piece {
     public Dame(int couleur) {
         super(couleur);

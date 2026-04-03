@@ -1,3 +1,5 @@
+package modele;
+
 public class Jeu {
     private Plateau plateau;
     private Joueur joueurNoir;

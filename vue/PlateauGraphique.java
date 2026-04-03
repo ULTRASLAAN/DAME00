@@ -1,3 +1,7 @@
+package vue;
+
+import modele.Plateau;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

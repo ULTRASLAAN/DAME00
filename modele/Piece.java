@@ -1,3 +1,5 @@
+package modele;
+
 public abstract class Piece {
     protected int couleur; // 1 = noir, 2 = rouge
 
