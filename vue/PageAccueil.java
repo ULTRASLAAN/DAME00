@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:vue/PageAccueil.java
 package vue;
+========
+package view;
+>>>>>>>> 025c261 (dame promotion):view/PageAccueil.java
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

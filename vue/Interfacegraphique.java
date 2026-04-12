@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:vue/Interfacegraphique.java
 package vue;
+========
+package view;
+>>>>>>>> 025c261 (dame promotion):view/Interfacegraphique.java
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +15,8 @@ public class Interfacegraphique {
         String titre = "Jeu de Dames - " + nomNoir + " vs " + nomRouge;
         JFrame frame = new JFrame(titre);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 600); // Taille de la fenêtre
-        frame.setLocationRelativeTo(null); // Centre la fenêtre
+        frame.setSize(600, 600);
+        frame.setLocationRelativeTo(null);
         PlateauGraphique plateau = new PlateauGraphique();
 
         JPanel racine = new JPanel(new BorderLayout());
@@ -26,6 +30,6 @@ public class Interfacegraphique {
         racine.add(plateau, BorderLayout.CENTER);
 
         frame.setContentPane(racine);
-        frame.setVisible(true); // Affiche la fenêtre
+        frame.setVisible(true);
     }
 }

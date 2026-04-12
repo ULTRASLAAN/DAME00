@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:modele/Jeu.java
 package modele;
+========
+package model;
+>>>>>>>> 025c261 (dame promotion):model/Jeu.java
 
 public class Jeu {
     private Plateau plateau;

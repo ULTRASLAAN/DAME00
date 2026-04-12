@@ -9,12 +9,12 @@ Ce projet est un jeu de dames classique, développé en Java avec une interface 
    - Placez-vous dans le dossier du projet.
    - Compilez tous les fichiers Java :
      ```
-     javac *.java
+  javac -d out app/*.java model/*.java view/*.java
      ```
 3. **Exécution** :
    - Lancez le jeu avec :
      ```
-     java Main
+  java -cp out app.Main
      ```
 
 ## Justification du choix de Swing
@@ -28,11 +28,12 @@ Swing a été choisi pour l'interface graphique car :
 ![Aperçu du jeu de dames](image.png)
 
 ## Structure du projet
-- `Main.java` : point d'entrée du programme
-- `Interfacegraphique.java` : création de la fenêtre principale
-- `PlateauGraphique.java` : affichage du damier, gestion des clics, historique
-- `Plateau.java`, `Case.java`, `Piece.java`, `Pion.java`, `Dame.java` : logique du jeu et des pièces
-- `Joueur.java`, `Jeu.java` : gestion des joueurs et du déroulement
+- `app/Main.java` : point d'entrée du programme
+- `view/PageAccueil.java` : écran d'accueil
+- `view/Interfacegraphique.java` : création de la fenêtre principale
+- `view/PlateauGraphique.java` : affichage du damier, gestion des clics, historique
+- `model/Plateau.java`, `model/Case.java`, `model/Piece.java`, `model/Pion.java`, `model/Dame.java` : logique du jeu et des pièces
+- `model/Joueur.java`, `model/Jeu.java` : gestion des joueurs et du déroulement
 
 ## Auteurs
 - Mustafa
