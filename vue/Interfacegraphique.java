@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:vue/Interfacegraphique.java
 package vue;
-========
-package view;
->>>>>>>> 025c261 (dame promotion):view/Interfacegraphique.java
 
 import javax.swing.*;
 import java.awt.*;

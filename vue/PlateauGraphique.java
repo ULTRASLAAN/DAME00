@@ -1,13 +1,7 @@
-<<<<<<<< HEAD:vue/PlateauGraphique.java
 package vue;
 
 import modele.Plateau;
-========
-package view;
-
-import model.Plateau;
-import model.Piece;
->>>>>>>> 025c261 (dame promotion):view/PlateauGraphique.java
+import modele.Piece;
 
 import javax.swing.*;
 import java.awt.*;

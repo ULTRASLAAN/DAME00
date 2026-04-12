@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:modele/Plateau.java
 package modele;
-========
-package model;
->>>>>>>> 025c261 (dame promotion):model/Plateau.java
 
 public class Plateau {
     // Constantes du plateau et des pièces
